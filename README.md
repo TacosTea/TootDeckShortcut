@@ -1,1 +1,2 @@
-# TootDeckShortcut
+# なんこれ
+TweetDeckのショートカットをMastodonでやりたい人用のUserScript
