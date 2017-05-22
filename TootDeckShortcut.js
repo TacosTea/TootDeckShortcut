@@ -1,27 +1,29 @@
 // ==UserScript==
-// @name         MastodonDeck Shortcat
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  Add shortcat keys like TweetDeck to Mastodon
+// @name         MastodonDeck Shortcut
+// @namespace    http://github,com/TacosTea/
+// @version      0.2
+// @description  Add shortcut keys like TweetDeck to Mastodon
 // @author       tacostea
 // @match        https://*/web/*
 // @grant        none
+// @downloadURL  https://raw.githubusercontent.com/TacosTea/TootDeckShortcut/master/TootDeckShortcut.js
 // ==/UserScript==
 
 (function() {
  'use strict';
- $(document).keyup(function(e) {
+ document.onkeyup = function(e) {
    if (document.activeElement.tagName != "INPUT" && document.activeElement.tagName != "TEXTAREA") {
    switch (e.keyCode) {
    case 78:
    // Key: n
-   $("textarea.autosuggest-textarea__textarea")[0].focus();
-   $("textarea.autosuggest-textarea__textarea")[0].value="";
+   document.getElementsByClassName("autosuggest-textarea__textarea")[0].focus();
+   document.getElementsByClassName("autosuggest-textarea__textarea")[0].value="";
    break;
+
    case 83:
    // key: s
-   $("input.search__input")[0].focus();
-   $("input.search__input")[0].value="";
+   document.getElementsByClassName("search__input")[0].focus();
+   document.getElementsByClassName("input.search__input")[0].value="";
    break;
    }
    }
