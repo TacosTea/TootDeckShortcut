@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         MastodonDeck Shortcut
+// @name         TootDeck Shortcut
 // @namespace    http://github.com/TacosTea/
-// @version      0.5
+// @version      0.7
 // @description  Add shortcut keys like TweetDeck to Mastodon
 // @author       tacostea
 // @match        https://*/web/*
